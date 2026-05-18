@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+
+@theme {
+  /* Fonts */
+  --font-heading: "Inter", "Noto Sans", sans-serif;
+  --font-body: "Inter", "Noto Sans", sans-serif;
+  --font-serif: "Noto Serif", serif;
+  --font-haas: "Neue Haas Grotesk Display Pro", sans-serif;
+
+
+  --color-primary: #001F3D;
+  --color-secondary: #FBFBF9;
+  --color-hover: #ED985F;
+
+  /* Text Sizes */
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+
+  /* Responsive Text Sizes (optional) */
+  --text-xs-mobile: 10px;
+  --text-sm-mobile: 12px;
+  --text-md-mobile: 14px;
+  --text-lg-mobile: 16px;
+  --text-xl-mobile: 18px;
+
+  --text-xs-tablet: 11px;
+  --text-sm-tablet: 13px;
+  --text-md-tablet: 15px;
+  --text-lg-tablet: 17px;
+  --text-xl-tablet: 19px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 6px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  --gap-xs: 4px;    /* Bohat qareeb elements ke liye */
+  --gap-sm: 16px;    /* Items in a row */
+  --gap-md: 16px;   /* Standard gap */
+  --gap-lg: 24px;   /* Cards ke darmiyan gap */
+  --gap-xl: 32px;   /* Large sections ke liye */
+  --gap-2xl: 64px;
+
+  /* --- Custom Animations (Jo humne pehle discuss ki thi) --- */
+  @keyframes fade-loop {
+    0%, 45% { opacity: 1; }
+    55%, 100% { opacity: 0; }
+  }
+  @keyframes fade-loop-reverse {
+    0%, 45% { opacity: 0; }
+    55%, 100% { opacity: 1; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-fade-loop-1: fade-loop 6s infinite alternate ease-in-out;
+  --animate-fade-loop-2: fade-loop-reverse 6s infinite alternate ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* SweetAlert Premium Theme */
+.premium-swal-popup {
+  background: #001F3D !important;
+  border: 1px solid #001F3D;
+  border-radius: 6px !important;
+  padding: 2rem !important;
+  width: 90% !important;
+  max-width: 450px !important;
+}
+
+.premium-swal-title {
+  color: #FBFBF9 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.2em !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.swal-sub-title {
+  color: #FBFBF9 !important;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.premium-input, .premium-select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 6px !important;
+  color: #FBFBF9 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.premium-input:focus {
+  border-color: white !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  outline: none;
+}
+
+.phone-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.premium-select {
+  width: 100px !important;
+  cursor: pointer;
+  background-color: #001F3D !important;
+}
+
+.phone-input {
+  flex: 1;
+}
+
+/* Buttons */
+.premium-confirm-btn {
+  background: #FBFBF9 !important;
+  color: #001F3D !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  font-size: 11px !important;
+  padding: 16px 32px !important;
+  border-radius: 6px !important;
+  width: 100%;
+  margin-top: 20px !important;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.premium-confirm-btn:active {
+  transform: scale(0.95);
+}
+
+.premium-cancel-btn {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-size: 10px !important;
+  margin-top: 10px !important;
+  cursor: pointer;
+}
+
+/* Validation Message */
+.premium-validation-error {
+  background: #ff3b30 !important;
+  color: white !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  border-radius: 8px !important;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+  .premium-swal-popup {
+    padding: 1.5rem !important;
+  }
+}
